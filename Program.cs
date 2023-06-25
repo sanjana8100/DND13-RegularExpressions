@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("----------User Registration----------");
+            Console.WriteLine();
+
+            UserRegistration userRegistration = new UserRegistration();
+
+            Console.Write("Enter First Name: ");
+            String firstName = Console.ReadLine();
+            userRegistration.ValidateFirstName(firstName);
         }
     }
 }
