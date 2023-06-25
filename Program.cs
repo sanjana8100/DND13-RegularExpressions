@@ -24,6 +24,10 @@
             Console.Write("Enter Phone Number: ");
             String phoneNumber = Console.ReadLine();
             userRegistration.ValidatePhoneNumber(phoneNumber);
+
+            Console.Write("Enter Password: ");
+            String password = Console.ReadLine();
+            userRegistration.ValidatePassword(password);
         }
     }
 }

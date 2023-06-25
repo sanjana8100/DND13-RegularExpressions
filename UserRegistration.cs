@@ -72,5 +72,21 @@ namespace DND13_RegularExpressions
             }
             Console.WriteLine();
         }
+
+        public void ValidatePassword(string password)
+        {
+            Regex passwordPattern = new Regex("^[a-zA-Z0-9]{8,}$");
+            Match passwordMatcher = passwordPattern.Match(password);
+
+            if (passwordMatcher.Success)
+            {
+                Console.WriteLine("-----Valid Password");
+            }
+            else
+            {
+                Console.WriteLine("-----Invalid Password");
+            }
+            Console.WriteLine();
+        }
     }
 }
