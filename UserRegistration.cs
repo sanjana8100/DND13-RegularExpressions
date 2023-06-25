@@ -22,6 +22,23 @@ namespace DND13_RegularExpressions
             {
                 Console.WriteLine("-----Invalid First Name");
             }
+            Console.WriteLine();
+        }
+
+        public void ValidateLastName(string lastName)
+        {
+            Regex lastNamePattern = new Regex("^[A-Z][a-z]{3,}$");
+            Match lastNameMatcher = lastNamePattern.Match(lastName);
+
+            if (lastNameMatcher.Success)
+            {
+                Console.WriteLine("-----Valid Last Name");
+            }
+            else
+            {
+                Console.WriteLine("-----Invalid Last Name");
+            }
+            Console.WriteLine();
         }
     }
 }
