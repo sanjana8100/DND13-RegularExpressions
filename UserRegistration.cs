@@ -56,5 +56,21 @@ namespace DND13_RegularExpressions
             }
             Console.WriteLine();
         }
+
+        public void ValidatePhoneNumber(string phoneNumber)
+        {
+            Regex phoneNumberPattern = new Regex("^[+]{1}[0-9]{2}\\s[0-9]{10}$");
+            Match phoneNumberMatcher = phoneNumberPattern.Match(phoneNumber);
+
+            if (phoneNumberMatcher.Success)
+            {
+                Console.WriteLine("-----Valid Phone Number");
+            }
+            else
+            {
+                Console.WriteLine("-----Invalid Phone Number");
+            }
+            Console.WriteLine();
+        }
     }
 }
