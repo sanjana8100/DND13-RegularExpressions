@@ -40,5 +40,21 @@ namespace DND13_RegularExpressions
             }
             Console.WriteLine();
         }
+
+        public void ValidateEmail(string email)
+        {
+            Regex emailPattern = new Regex("^[0-9a-zA-Z]+([.]([a-z0-9A-Z]+))*[@][a-zA-Z]+[.][a-z]{2,4}([.][a-z]{2})?$");
+            Match emailMatcher = emailPattern.Match(email);
+
+            if (emailMatcher.Success)
+            {
+                Console.WriteLine("-----Valid Email Address");
+            }
+            else
+            {
+                Console.WriteLine("-----Invalid Email Address");
+            }
+            Console.WriteLine();
+        }
     }
 }
